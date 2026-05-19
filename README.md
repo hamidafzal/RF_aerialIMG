@@ -8,8 +8,7 @@ This repository implements a machine learning pipeline for aerial image classifi
 
 The full pipeline consists of the following stages:
 
-* Feature Extraction  
-* Dimensionality Reduction (LDA)  
+* Feature Extraction   
 * Feature Selection (SFS)  
 * Classification (Random Forest)
 
@@ -37,16 +36,6 @@ Shape- and structure-based features are extracted, including:
 * Perimeter  
 * Compactness  
 * Shape descriptors  
-
----
-
-# 📉 Dimensionality Reduction: LDA
-
-Linear Discriminant Analysis (LDA) is applied to:
-
-* Reduce feature dimensionality  
-* Preserve class separability  
-* Improve computational efficiency and model performance  
 
 ---
 
@@ -83,12 +72,10 @@ Follow these steps to run the pipeline:
   * Textural features  
   * Morphological features  
 
-## 2. Dimensionality Reduction (LDA)
-* Apply LDA on extracted features  
 
-## 3. Feature Selection (SFS)
+## 2. Feature Selection (SFS)
 * Run Sequential Feature Selection to identify optimal feature subset  
 
-## 4. Classification (Random Forest)
+## 3. Classification (Random Forest)
 * Train RF model using selected features  
 * Evaluate performance on test data  
