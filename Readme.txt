@@ -1,40 +1,72 @@
-# Aerial Image Classification using Random Forest (RF)
+🌍 Aerial Image Classification using Random Forest
 
-This repository contains code and resources for classifying aerial images using Random Forest (RF) algorithm. The classification process involves data preparation steps such as GLCM (Gray-Level Co-occurrence Matrix), textural feature extraction, and morphological feature extraction. Additionally, Linear Discriminant Analysis (LDA) is calculated to reduce dimensionality, Sequential Feature Selection (SFS) is applied for feature selection, and finally, RF classifier is utilized for image classification.
+This repository implements a machine learning pipeline for aerial image classification using a Random Forest (RF) classifier. The workflow combines texture and morphological feature extraction with dimensionality reduction and feature selection techniques to improve classification performance.
 
-## Data Preparation
+📌 Pipeline Overview
 
-The data preparation stage includes the following steps:
+The full pipeline consists of the following stages:
 
-1. **GLCM (Gray-Level Co-occurrence Matrix)**: Calculating GLCM to capture spatial relationships in the image, which helps in extracting texture features.
+Feature Extraction
+Dimensionality Reduction (LDA)
+Feature Selection (SFS)
+Classification (Random Forest)
+🧩 Feature Extraction
+🟦 GLCM (Gray-Level Co-occurrence Matrix)
 
-2. **Textural Feature Extraction**: Extracting texture features from the images using various methods such as Haralick features, Gabor filters, etc.
+GLCM is used to capture spatial relationships between pixel intensities, enabling extraction of rich texture information from aerial images.
 
-3. **Morphological Feature Extraction**: Extracting morphological features such as area, perimeter, and shape descriptors from the images.
+🟩 Textural Features
 
-## Linear Discriminant Analysis (LDA)
+Texture descriptors are extracted using methods such as:
 
-LDA is performed to reduce the dimensionality of the feature space while preserving the class discriminatory information.
+Haralick features
+Gabor filters
+Other statistical texture measures
+🟨 Morphological Features
 
-## Sequential Feature Selection (SFS)
+Shape- and structure-based features are extracted, including:
 
-Sequential Feature Selection is applied to select the most relevant features from the feature space. This step helps in improving classification performance by eliminating irrelevant features and reducing overfitting.
+Area
+Perimeter
+Compactness
+Shape descriptors
+📉 Dimensionality Reduction: LDA
 
-## Random Forest (RF) Classification
+Linear Discriminant Analysis (LDA) is applied to:
 
-Random Forest classifier is applied to classify the aerial images based on the selected features. RF is an ensemble learning method that builds multiple decision trees and merges their predictions to improve accuracy and robustness.
+Reduce feature dimensionality
+Preserve class separability
+Improve computational efficiency and model performance
+🔍 Feature Selection: SFS
 
-## Usage
+Sequential Feature Selection (SFS) is used to identify the most relevant subset of features by:
 
-To use the code provided in this repository, follow these steps:
+Iteratively adding/removing features
+Optimizing classification performance
+Reducing overfitting and redundancy
+🌲 Classification: Random Forest
 
-1. **Data Preparation**: Prepare your aerial images dataset and extract GLCM, textural, and morphological features using the provided scripts or your own methods.
+A Random Forest classifier is trained on the selected features.
 
-2. **Linear Discriminant Analysis (LDA)**: Calculate LDA using the extracted features to reduce dimensionality.
+Key advantages:
 
-3. **Sequential Feature Selection (SFS)**: Apply SFS to select the most relevant features.
+Ensemble of decision trees
+Robust to noise and overfitting
+High accuracy for high-dimensional data
+🚀 Usage
 
-4. **Random Forest Classification**: Train the RF classifier using the selected features and evaluate its performance on the test dataset.
+Follow these steps to run the pipeline:
 
-## Repository Structure
-
+1. Data Preparation
+Prepare your aerial image dataset
+Extract:
+GLCM features
+Textural features
+Morphological features
+2. Dimensionality Reduction (LDA)
+Apply LDA on extracted features
+3. Feature Selection (SFS)
+Run Sequential Feature Selection to identify optimal feature subset
+4. Classification (Random Forest)
+Train RF model using selected features
+Evaluate performance on test data
